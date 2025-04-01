@@ -1,0 +1,17 @@
+services:
+
+  mysql:
+    image: mysql:8.0.34
+    restart: always
+
+    environment:
+     - MYSQL_RANDOM_ROOT_PASSWORD=yes
+     - MYSQL_USER=YEGOR
+     - MYSQL_PASSWORD=QWERT
+     - MYSQL_DB=app
+
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - ./schema:/docker-entrypoint-initbd.d
