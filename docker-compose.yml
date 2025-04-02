@@ -6,9 +6,9 @@ services:
 
     environment:
      - MYSQL_RANDOM_ROOT_PASSWORD=yes
-     - MYSQL_USER=YEGOR
-     - MYSQL_PASSWORD=QWERT
-     - MYSQL_DB=app
+     - MYSQL_USER=app
+     - MYSQL_PASSWORD=pass
+     - MYSQL_DB=db
 
     ports:
       - "3306:3306"
