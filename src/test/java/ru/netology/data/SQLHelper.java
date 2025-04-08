@@ -15,7 +15,7 @@ public class SQLHelper {
     }
 
     private static Connection getCon() throws SQLException {
-        return DriverManager.getConnection(System.getProperty("db.url"), "YEGOR", "QWERT");
+        return DriverManager.getConnection(System.getProperty("db.url"), "app", "pass");
     }
     @SneakyThrows
     public static DataHelper.VerificationCode getVerificationCode() {
