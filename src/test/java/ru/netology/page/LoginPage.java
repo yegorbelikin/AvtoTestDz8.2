@@ -10,10 +10,10 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
 
-    public final SelenideElement loginField = $("[data-test-id= 'login'] input");
-    public final SelenideElement passwordField = $("[data-test-id= 'password'] input");
-    public final SelenideElement loginButton = $("[data-test-id= 'action-login']");
-    public final SelenideElement errorField = $("[data-test-id= 'error-notification'] .notification__content");
+    public final SelenideElement loginField = $("[data-test-id=login] input");
+    public final SelenideElement passwordField = $("[data-test-id=password] input");
+    public final SelenideElement loginButton = $("[data-test-id=action-login]");
+    public final SelenideElement errorField = $("[data-test-id='error-notification'] .notification__content");
 
 
     public VerificationPage validLogin(DataHelper.AuthInfo info) {

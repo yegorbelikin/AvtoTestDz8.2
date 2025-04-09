@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class DashBoardPage {
-    private final SelenideElement pageTitle = $("");
+    private final SelenideElement pageTitle = $("[data-test-id=dashboard]");
 
     public DashBoardPage() {
         pageTitle.shouldHave(text("Личный кабинет")).shouldBe(Condition.visible);

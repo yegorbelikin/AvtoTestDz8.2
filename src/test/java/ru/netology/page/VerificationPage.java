@@ -9,9 +9,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 
 public class VerificationPage {
-    private final SelenideElement codeInputField = $("");
-    private final SelenideElement verifyButton =  $("");
-    private final SelenideElement errorField = $("");
+    private final SelenideElement codeInputField = $("[data-test-id=code] input");
+    private final SelenideElement verifyButton =  $("[data-test-id=action-verify]");
+    private final SelenideElement errorField = $("[data-test-id='error-notification'] .notification__content");
 
 
     public VerificationPage() {

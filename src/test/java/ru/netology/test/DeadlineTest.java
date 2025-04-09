@@ -36,4 +36,20 @@ public class DeadlineTest {
         verificationPage.validVerify(verificationCode.getCode());
     }
 
+    @Test
+    void errorLogin() {
+        var authInfo = DataHelper.randomAuthInfo();
+        loginPage.login(authInfo);
+        loginPage.errorNotification("");
+    }
+
+    @Test
+    void errorCode() {
+        var verificationPage = loginPage.validLogin(authInfo);
+        var verificationCode = DataHelper.randomCode();
+        verificationPage.verify(verificationCode.getCode());
+        verificationPage.errorNotification("");
+    }
+
+
 }
