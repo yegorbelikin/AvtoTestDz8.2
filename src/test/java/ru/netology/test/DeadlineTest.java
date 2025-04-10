@@ -40,7 +40,7 @@ public class DeadlineTest {
     void errorLogin() {
         var authInfo = DataHelper.randomAuthInfo();
         loginPage.login(authInfo);
-        loginPage.errorNotification("");
+        loginPage.errorNotification("Ошибка! \nНеверно указан логин или пароль");
     }
 
     @Test
@@ -48,7 +48,7 @@ public class DeadlineTest {
         var verificationPage = loginPage.validLogin(authInfo);
         var verificationCode = DataHelper.randomCode();
         verificationPage.verify(verificationCode.getCode());
-        verificationPage.errorNotification("");
+        verificationPage.errorNotification("Ошибка! \nНеверно указан код! Попробуйте ещё раз.");
     }
 
 
